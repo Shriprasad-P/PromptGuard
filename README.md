@@ -18,11 +18,11 @@ Coding agents are powerful but vulnerable to prompt injection attacks that can:
 
 ### How is this different from AgentGate?
 
-- **[AgentGate](https://github.com/Shriprasad-P/AgentGate)**: Routes requests to appropriate agents, manages tool permissions, controls which agent/tools handle a task
+- **[AgentGate](https://github.com/Shriprasad-P/AgentGate)**: Agent-level control plane providing inventory, tool allowlists, fail-closed kill-switch, and append-only audit
 - **PromptGuard**: Validates that requests aren't malicious, detects injection patterns, blocks attacks before they reach agents
 - **[CodeForge-AI](https://github.com/Shriprasad-P/CodeForge-AI)**: AI-powered code generation and refactoring toolkit
 
-Use them together: PromptGuard → AgentGate → Agent
+Use them together: PromptGuard (is it safe?) → AgentGate (which agent/tools are allowed / kill) → Agent
 
 ## 🏗️ Architecture
 
@@ -293,7 +293,7 @@ PORT=8000
 
 ## 🔗 Related Projects
 
-- **[AgentGate](https://github.com/Shriprasad-P/AgentGate)**: Agent orchestration and tool routing gateway
+- **[AgentGate](https://github.com/Shriprasad-P/AgentGate)**: Agent-level control plane with inventory, tool allowlists, fail-closed kill-switch, and append-only audit
 - **[CodeForge-AI](https://github.com/Shriprasad-P/CodeForge-AI)**: AI-powered code generation toolkit
 
 ## 📝 License
