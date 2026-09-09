@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  promptguard:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GUARD_TOKEN=${GUARD_TOKEN:-dev-token-change-in-production}
+      - BLOCK_THRESHOLD=${BLOCK_THRESHOLD:-70}
+      - DATABASE_URL=sqlite:///./data/promptguard.db
+      - HOST=0.0.0.0
+      - PORT=8000
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
