@@ -2,6 +2,8 @@
 
 **Prompt injection defense gateway for coding agents**
 
+> **Status**: Active development · Last updated: Sep 2026 · Demo project
+
 PromptGuard is a focused security layer that sits in front of coding agents to detect and block prompt injection and jailbreak attempts. It validates incoming prompts and tool arguments using a rule-based engine with scoring, provides fail-closed protection, and maintains an append-only audit log.
 
 Built by [Shriprasad Patil](https://github.com/Shriprasad-P) as a public resume project demonstrating secure AI agent architectures.
